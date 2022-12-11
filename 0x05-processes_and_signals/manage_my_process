@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# a manage_my_process Bash script that:
-TEMP_FILE=/tmp/my_process
-while true
+#manage my processes
+echo "I am alive!" > /tmp/my_process
+while ((1))
 do
-    echo "I am alive!" >> "$TEMP_FILE"
+    echo "I am alive!" >> /tmp/my_process
     sleep 2
 done

@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-#display statement inifite times
-
-while true
+#displays a line for an infinite amount of time and pauses 2 seconds after
+while ((1))
 do
-echo "To infinity and beyond"
-sleep 2
+    echo "To infinity and beyond"
+    sleep 2
 done

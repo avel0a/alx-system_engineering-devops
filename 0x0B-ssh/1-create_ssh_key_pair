@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# this scripts create a key pair public and private with rsa type passphrase of betty number of bit of 4096 and name of private key school
-
-ssh-keygen -b 4096 -N betty -f school 
+# script that creates an RSA key pair name holberton number bits 4096
+ssh-keygen -b 4096 -f school -N betty

@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-#script displaying infinity statement with a sleep 2 in between and displays I'm invincible!!! when SIGTERM is called
-
-trap "echo 'I am invincible!!!'" SIGTERM
-while true
+#displays a line for an infinite amount of time and pauses 2 seconds after
+trap 'echo "I am invincible!!!"' SIGTERM
+while ((1))
 do
-echo "To infinity and beyond"
-sleep 2
+    echo "To infinity and beyond"
+    sleep 2
 done

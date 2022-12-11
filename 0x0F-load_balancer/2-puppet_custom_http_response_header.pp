@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
-# Add a custom HTTP header with Puppet
-exec {'http header':
-command  => 'sudo apt update && sudo apt -y install nginx && custom_header="\\\tadd_header X-Served-By \$hostname;\n" &&
-     sudo sed -i "17i $custom_header" /etc/nginx/nginx.conf &&
-sudo service nginx restart',
-provider => shell,
+# Automation: creates a custom HTTP header response with Puppet.
+exec { 'command':
+  command  => 'apt-get -y update;
+  apt-get -y install nginx;
+  sudo sed -i "/listen 80 default_server;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default;
+  service nginx restart',
+  provider => shell,
 }
